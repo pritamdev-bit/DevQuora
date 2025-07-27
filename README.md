@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevQuora
 
-## Getting Started
+**DevQuora** is a minimalistic developers query app built with Next.js 15, Tailwind CSS, and Appwrite. It allows developers to post questions, answer others, and engage in a collaborative tech community.
 
-First, run the development server:
+## ✨ Features
+
+- Authentication via Appwrite
+- Ask, answer, and upvote questions
+- Markdown editor for posts
+- Responsive dark UI with Tailwind CSS
+- Tag-based filtering
+- Toast notifications and confetti effects
+
+## 🚀 Tech Stack
+
+- **Frontend:** Next.js 15, React 19, Tailwind CSS 4
+- **Backend:** Appwrite (client & server SDKs)
+- **State Management:** Zustand
+- **Animations:** Framer Motion, Lucide Icons
+- **Editor:** `@uiw/react-md-editor`
+
+## 📦 Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure to configure your .env.local with your Appwrite project credentials.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🛠️ Scripts
+dev - Start dev server with Turbopack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+build - Build the production app
 
-## Learn More
+start - Run the production server
 
-To learn more about Next.js, take a look at the following resources:
+lint - Lint your code
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📄 License
+MIT © 2025 DevQuora Team
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Let me know if you want to add deployment instructions (like for Vercel) or include screenshots/badges.
