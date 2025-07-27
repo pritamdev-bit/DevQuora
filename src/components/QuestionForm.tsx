@@ -153,8 +153,12 @@ const QuestionForm = ({ question }: { question?: Models.Document }) => {
             const response = question ? await update() : await create();
 
             router.push(`/questions/${response.$id}/${slugify(formData.title)}`);
-        } catch (error: any) {
-            setError(() => error.message);
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                setError(() => error.message);
+            } else {
+                setError(() => "Something went wrong");
+            }
         }
 
         setLoading(() => false);

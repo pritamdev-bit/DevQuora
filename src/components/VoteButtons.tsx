@@ -63,8 +63,12 @@ const VoteButtons = ({
 
             setVoteResult(() => data.data.voteResult);
             setVotedDocument(() => data.data.document);
-        } catch (error: any) {
-            window.alert(error?.message || "Something went wrong");
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                window.alert(error.message);
+            } else {
+                window.alert("Something went wrong");
+            }
         }
     };
 
@@ -90,8 +94,12 @@ const VoteButtons = ({
 
             setVoteResult(() => data.data.voteResult);
             setVotedDocument(() => data.data.document);
-        } catch (error: any) {
-            window.alert(error?.message || "Something went wrong");
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                window.alert(error.message);
+            } else {
+                window.alert("Something went wrong");
+            }
         }
     };
 

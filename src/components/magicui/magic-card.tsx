@@ -31,7 +31,7 @@ function useMousePosition(): MousePosition {
 
 interface MagicContainerProps {
     children?: ReactNode;
-    className?: any;
+    className?: string | undefined;
 }
 
 const MagicContainer = ({ children, className }: MagicContainerProps) => {
@@ -163,7 +163,7 @@ interface MagicCardProps {
      * */
     background?: string;
 
-    [key: string]: any;
+    [key: string]: unknown;
 }
 
 const MagicCard: React.FC<MagicCardProps> = ({

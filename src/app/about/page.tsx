@@ -9,7 +9,7 @@ export default function AboutPage() {
         <h1 className="text-4xl font-bold text-orange-500">About DevQuora</h1>
         <p className="text-lg text-gray-300">
           DevQuora is a modern Q&A platform built for developers, inspired by
-          curious tech community. Whether you're a beginner or an expert, DevQuora helps
+          curious tech community. Whether you are a beginner or an expert, DevQuora helps
           you ask questions, share knowledge, and grow together as a tech
           community.
         </p>

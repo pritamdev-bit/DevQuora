@@ -25,13 +25,13 @@ export async function POST(request: NextRequest) {
             status: 201
         })
 
-    } catch (error: any) {
+    } catch (error: unknown) {
         return NextResponse.json(
             {
-                error: error?.message || "Error in getting answer"
+                error: error || "Error in getting answer"
             },
             {
-                status: error?.status || error?.code || 500
+                status: 501
             }
         )
     }
@@ -52,13 +52,15 @@ export async function DELETE(request: NextRequest) {
 
         return NextResponse.json({response},{status: 200})
 
-    } catch (error: any) {
+    } catch (error: unknown) {
+        const err = error as { message?: string; status?: number; code?: number };
+
         return NextResponse.json(
             {
-                error: error?.message || "Error in getting answer"
+                error: err?.message || "Error in getting answer",
             },
             {
-                status: error?.status || error?.code || 500
+                status: err?.status || err?.code || 500,
             }
         )
     }
