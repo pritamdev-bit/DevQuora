@@ -3,14 +3,14 @@ import { databases } from "@/models/server/config";
 import React from "react";
 import EditQues from "./Editques";
 
-type PageProps = {
+type CustomPageProps = {
   params: {
     quesId: string;
     quesName: string;
   };
 };
 
-const Page = async ({ params }: PageProps) => {
+const Page = async ({ params }: CustomPageProps) => {
     const question = await databases.getDocument(db, questionCollection, params.quesId);
 
     return <EditQues question={question} />;
