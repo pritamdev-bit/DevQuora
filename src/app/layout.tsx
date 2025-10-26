@@ -17,6 +17,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DevQuora - A Q&A App for Devs",
   description: "DevQuora - A Q&A App for Developers, Inspired by Curious Tech Community",
+  openGraph: {
+    title: "DevQuora - A Q&A App for Devs",
+    description: "DevQuora - A Q&A App for Developers, Inspired by Curious Tech Community",
+    url: "https://dev-quora-black.vercel.app/",
+    siteName: "DevQuora - A Q&A App for Devs",
+    images: [
+      {
+        url: "/og_image.png",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  }
 };
 
 export default function RootLayout({
